@@ -1,12 +1,16 @@
 import os
 import subprocess
 import sys
-import json  # Changed from yaml to json
+import json
+from PyQt5.QtWidgets import QApplication
 
 sys.path.append(os.path.join(os.environ["SMESH_ROOT_DIR"], "share", "salome", "plugins", "smesh", "mmgplugin"))
 sys.path.append(os.path.join(os.environ["SMESH_ROOT_DIR"], "share", "salome", "plugins", "smesh"))
 
 from myMmgPlugDialog import *
+
+# Initialize QApplication
+app = QApplication(sys.argv)
 
 result_dict = {}
 
